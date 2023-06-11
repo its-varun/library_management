@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website with Login & Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav_logo">Library Management System</a>
+
+      <button class="button" id="form-open">Login</button>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="form_container">
+      <i class="uil uil-times form_close"></i>
+      <!-- Login From -->
+      <div class="form login_form">
+        <form id="login-form"  action="#" >
+          <h2>Login</h2>
+          <div class="input_box">
+            <input type="email" id="login-email" placeholder="Enter your email" required />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" id="login-password" placeholder="Enter your password" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="login-remember-me" />
+              <label for="login-remember-me">Remember me</label>
+            </span>
+            <a href="#" class="forgot_pw">Forgot password?</a>
+          </div>
+
+          <input type="submit" class="button" id="login-button" value="Login Now" onclick="openPage()">
+
+          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+        </form>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form signup_form">
+        <form id="signup-form" action="#" >
+          <h2>Signup</h2>
+
+          <div class="input_box">
+            <input type="text" id="signup-username" placeholder="Enter your username" required />
+            <div class="as">
+              <i class="uil uil-user username"></i>
+            </div>
+            <div class="username-error error"></div>
+          </div>
+
+          <div class="input_box">
+            <input type="tel" id="signup-phone" placeholder="Enter your phone number" required />
+            <div class="as">
+              <i class="uil uil-mobile-android phone"></i>
+            </div>
+            <div class="phone-error error"></div>
+          </div>
+
+          <div class="input_box">
+            <input type="email" id="signup-email" placeholder="Enter your email" required />
+            <div class="as">
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="email-error error"></div>
+          </div>
+
+          <div class="input_box">
+            <input type="password" id="signup-password" placeholder="Create password" required />
+            <div class="as">
+              <i class="uil uil-lock password"></i>
+            </div>
+            <i class="uil uil-eye-slash pw_hide"></i>
+            <div class="password-error error"></div>
+          </div>
+
+          <div class="input_box">
+            <input type="password" id="signup-confirm-password" placeholder="Re-enter password" required />
+            <div class="as">
+              <i class="uil uil-lock password"></i>
+            </div>
+            <i class="uil uil-eye-slash pw_hide"></i>
+            <div class="confirm-password-error error"></div>
+          </div><input type="submit" class="button" id="signup-button" value="Signup Now">
+          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
